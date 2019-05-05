@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:layout_marginTop="10dp"
+    >
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp" >
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/android_card_view_example"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          android:layout_marginLeft="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:elevation="4dp"
+                android:padding="16dp">
+
+                <Button
+                    android:id="@+id/proimg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/promoicon"
+
+                    />
+                <TextView
+                    android:id="@+id/protxt"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/proimg"
+                    android:text="PROMOTIONAL"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#0B1D5F" />
+                <Button
+                    android:id="@+id/topimg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@+id/proimg"
+                    android:background="@drawable/topicon"
+                    />
+                <TextView
+                    android:id="@+id/toptxt"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/topimg"
+                    android:layout_toRightOf="@+id/protxt"
+                    android:text="TOP OFFER"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#0B1D5F" />
+                <Button
+                    android:id="@+id/mobimg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@+id/topimg"
+                    android:background="@drawable/mobile"
+                    />
+                <TextView
+                    android:id="@+id/mobtxt"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/mobimg"
+                    android:layout_toRightOf="@+id/toptxt"
+                    android:text="MOBILE"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#0B1D5F" />
+                <Button
+                    android:id="@+id/eleimg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/protxt"
+                    android:background="@drawable/electronics"
+                    />
+                <TextView
+                    android:id="@+id/eletxt"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/eleimg"
+                    android:text="ELECTRONICS"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#0B1D5F" />
+                <Button
+                    android:id="@+id/beaimg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@+id/eleimg"
+                    android:layout_below="@+id/toptxt"
+                    android:background="@drawable/beauty"
+                    />
+                <TextView
+                    android:id="@+id/beatxt"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/beaimg"
+                    android:layout_toRightOf="@+id/eletxt"
+                    android:text="BEAUTY"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#0B1D5F" />
+                <Button
+                    android:id="@+id/fasimg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@+id/beaimg"
+                    android:layout_below="@+id/mobtxt"
+                    android:background="@drawable/fashion"
+                    />
+                <TextView
+                    android:id="@+id/fastxt"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/fasimg"
+                    android:layout_toRightOf="@+id/beatxt"
+                    android:text="FASHION"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#0B1D5F" />
+                <Button
+                    android:id="@+id/haimg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/eletxt"
+                    android:background="@drawable/homeapp"
+                    />
+                <TextView
+                    android:id="@+id/hatxt"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/haimg"
+                    android:text="HOME APPLIANCES"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#0B1D5F" />
+                <Button
+                    android:id="@+id/tbimg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@+id/haimg"
+                    android:layout_below="@+id/beatxt"
+                    android:background="@drawable/baby"
+                    />
+                <TextView
+                    android:id="@+id/tbtxt"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/tbimg"
+                    android:layout_toRightOf="@+id/hatxt"
+                    android:text="TOYS AND BABY"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#0B1D5F" />
+                <Button
+                    android:id="@+id/spoimg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@+id/tbimg"
+                    android:layout_below="@+id/fastxt"
+                    android:background="@drawable/sports"
+                    android:textColorHint="#fff"
+                    />
+                <TextView
+                    android:id="@+id/spotxt"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/tbimg"
+                    android:layout_toRightOf="@+id/tbtxt"
+                    android:text="SPORTS"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#0B1D5F"
+                    />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".menu"
+    tools:showIn="@layout/app_bar_menu"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/searchlayout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="#0000ff">
+
+        <EditText
+            android:id="@+id/searchtext"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:background="@drawable/searchboxstyle"
+            android:hint=" Search For Products and  more"
+            android:textColorHint="#8B8B8D"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="53dp"
+            android:layout_height="49dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="-53dp"
+            android:layout_marginLeft="-53dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_toEndOf="@+id/searchtext"
+            android:layout_toRightOf="@+id/searchtext"
+            android:background="@drawable/search5"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/viewall"
+            android:layout_width="383dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/searchtext"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/viewall"
+            tools:ignore="MissingConstraints" />
+    </RelativeLayout>
+
+
+
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+    </FrameLayout>
+
+</LinearLayout>

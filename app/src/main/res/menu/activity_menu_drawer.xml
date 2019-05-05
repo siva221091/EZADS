@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/promotinaloffer"
+            android:icon="@drawable/offer"
+            android:title="Promotional Offer" />
+        <item
+            android:id="@+id/topoffer"
+            android:icon="@drawable/offer"
+            android:title="Top Offer" />
+        <item
+            android:id="@+id/mobile"
+            android:icon="@drawable/mobile"
+            android:title="Mobile" />
+        <item
+            android:id="@+id/electronics"
+            android:icon="@drawable/electronics"
+            android:title="Electronics" />
+        <item
+            android:id="@+id/beauty"
+            android:icon="@drawable/beauty"
+            android:title="Beauty" />
+        <item
+            android:id="@+id/fashion"
+            android:icon="@drawable/fashion"
+            android:title="Fashion" />
+        <item
+            android:id="@+id/homeappliances"
+            android:icon="@drawable/homeapp"
+            android:title="Home Appliances" />
+        <item
+            android:id="@+id/toysbaby"
+            android:icon="@drawable/baby"
+            android:title="Toys and Baby" />
+        <item
+            android:id="@+id/sports"
+            android:icon="@drawable/sports"
+            android:title="Sports" />
+
+    </group>
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Share" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_send"-->
+                <!--android:icon="@drawable/ic_menu_send"-->
+                <!--android:title="Send" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>
