@@ -23,6 +23,6 @@ public class topoffer_2 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         //you can set the title for your toolbar here for different fragments different titles
-        getActivity().setTitle("Top_Offers");
+        getActivity().setTitle("Top Offers");
     }
 }

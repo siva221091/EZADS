@@ -12,17 +12,18 @@
     <RelativeLayout
         android:id="@+id/searchlayout"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="55dp"
         android:background="#0000ff">
 
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/searchtext"
             android:layout_width="match_parent"
             android:layout_height="49dp"
             android:background="@drawable/searchboxstyle"
-            android:hint=" Search For Products and  more"
-            android:textColorHint="#8B8B8D"
-            android:textStyle="bold"
+            android:hint="      Search For Products and  more"
+            android:textColorHint="#A7A7A8"
+            android:textStyle="normal"
+            android:textSize="15dp"
             tools:ignore="MissingConstraints" />
 
         <ImageButton
@@ -39,18 +40,161 @@
             android:layout_marginRight="0dp"
             android:layout_toEndOf="@+id/searchtext"
             android:layout_toRightOf="@+id/searchtext"
-            android:background="@drawable/search5"
-            tools:ignore="MissingConstraints" />
-
-        <Button
-            android:id="@+id/viewall"
-            android:layout_width="383dp"
-            android:layout_height="60dp"
-            android:layout_below="@+id/searchtext"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/viewall"
+            android:background="@drawable/search"
             tools:ignore="MissingConstraints" />
     </RelativeLayout>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/searchtext"
+            android:id="@+id/horizontalScrollView"
+           android:scrollbars="none" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#fff"
+                >
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/offf"
+                    android:id="@+id/button1" />
+               <TextView
+                   android:id="@+id/but1"
+                   android:layout_width="80dp"
+                   android:layout_height="50dp"
+                   android:text="Promotional"
+                   android:textColor="#000"
+                   android:gravity="center"
+                  android:layout_below="@+id/button1" />
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/off"
+                    android:id="@+id/button2"
+                   android:layout_toRightOf="@id/button1" />
+                <TextView
+                    android:id="@+id/but2"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:text="Top Offers"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:layout_toRightOf="@id/but1"
+                    android:layout_below="@+id/button2" />
+
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/mob"
+                    android:id="@+id/button3"
+                    android:layout_toRightOf="@id/button2" />
+                <TextView
+                    android:id="@+id/but3"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:text="Mobiles"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:layout_toRightOf="@id/but2"
+                    android:layout_below="@+id/button3" />
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/ele"
+                    android:id="@+id/button4"
+                    android:layout_toRightOf="@id/button3" />
+                <TextView
+                    android:id="@+id/but4"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:text="Electronics"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:layout_toRightOf="@id/but3"
+                    android:layout_below="@+id/button4" />
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/beautys"
+                    android:id="@+id/button5"
+                    android:layout_toRightOf="@id/button4" />
+                <TextView
+                    android:id="@+id/but5"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:text="Beauty"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:layout_toRightOf="@id/but4"
+                    android:layout_below="@+id/button5" />
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/fas"
+                    android:id="@+id/button6"
+                    android:layout_toRightOf="@id/button5" />
+                <TextView
+                    android:id="@+id/but6"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:text="Fashion"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:layout_toRightOf="@id/but5"
+                    android:layout_below="@+id/button6" />
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/babys"
+                    android:id="@+id/button7"
+                    android:layout_toRightOf="@id/button6" />
+                <TextView
+                    android:id="@+id/but7"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:text="Babys Toys"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:layout_toRightOf="@id/but6"
+                    android:layout_below="@+id/button7" />
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/homeap"
+                    android:id="@+id/button8"
+                    android:layout_toRightOf="@id/button7" />
+                <TextView
+                    android:id="@+id/but8"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:text="Appliances"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:layout_toRightOf="@id/but7"
+                    android:layout_below="@+id/button8" />
+                <Button
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/spo"
+                    android:id="@+id/button9"
+                    android:layout_toRightOf="@id/button8" />
+                <TextView
+                    android:id="@+id/but9"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:text="Sports"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:layout_toRightOf="@id/but8"
+                    android:layout_below="@+id/button9" />
+            </RelativeLayout>
+
+        </HorizontalScrollView>
+
 
 
 

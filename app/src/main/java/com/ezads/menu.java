@@ -1,6 +1,7 @@
 package com.ezads;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -20,20 +21,47 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class menu extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener,promotional_1.OnFragmentInteractionListener {
+import com.ezads.Sqllite.DbAdapter;
+
+import java.util.ArrayList;
+
+public class menu extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener,promotional_1.OnFragmentInteractionListener,View.OnClickListener {
 Button button;
+    Button b1, b2, b3, b4, b5, b6, b7, b8, b9;
+    AutoCompleteTextView text;
+    DbAdapter helper;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        text=(AutoCompleteTextView)findViewById(R.id.searchtext);
+        helper = new DbAdapter(this);
+        String[] col = {"Name"};
+        Cursor cursor = helper.getWordMatches(text.getText().toString(),col);
+        ArrayList<String> mArrayList = new ArrayList<String>();
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()) {
+            mArrayList.add(cursor.getString(cursor.getColumnIndex("Name"))); //add the item
+            cursor.moveToNext();
+        }
+        ArrayAdapter adapter = new
+                ArrayAdapter(this,android.R.layout.simple_list_item_1 ,mArrayList);
+
+        text.setAdapter(adapter);
+        text.setThreshold(1);
 
         if (savedInstanceState == null) {
             Fragment fragment = null;
@@ -49,28 +77,38 @@ Button button;
             fragmentManager.beginTransaction().replace(R.id.frame_layout, fragment).commit();
         }
 
+        b1 = (Button) findViewById(R.id.button1);
+        b1.setOnClickListener(this);
+        b2 = (Button) findViewById(R.id.button2);
+        b2.setOnClickListener(this);
+        b3 = (Button) findViewById(R.id.button3);
+        b3.setOnClickListener(this);
+        b4 = (Button) findViewById(R.id.button4);
+        b4.setOnClickListener(this);
+        b5 = (Button) findViewById(R.id.button5);
+        b5.setOnClickListener(this);
+        b6 = (Button) findViewById(R.id.button6);
+        b6.setOnClickListener(this);
+        b7 = (Button) findViewById(R.id.button7);
+        b7.setOnClickListener(this);
+        b8 = (Button) findViewById(R.id.button8);
+        b8.setOnClickListener(this);
+        b9 = (Button) findViewById(R.id.button9);
+        b9.setOnClickListener(this);
 
-        button=(Button)findViewById(R.id.viewall);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
 
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
-        button.setOnClickListener(new View.OnClickListener() {
-                                      @Override
-                                      public void onClick(View v) {
-                                          Intent intent = new Intent(getApplicationContext(), category.class);
-                                          startActivity(intent);
-                                      }
-                                  });
-
-                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -90,11 +128,7 @@ Button button;
         });
 
 
-
-
     }
-
-
 
 
     @Override
@@ -110,9 +144,9 @@ Button button;
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         //Inflate the menu; this adds items to the action bar if it is present.
-      getMenuInflater().inflate(R.menu.activity_menu_drawer, menu);
-      getMenuInflater().inflate(R.menu.menu,menu);
-      return true;
+        getMenuInflater().inflate(R.menu.activity_menu_drawer, menu);
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
     }
 
     @Override
@@ -261,5 +295,59 @@ Button button;
     }
 
 
+    @Override
+    public void onClick(View v) {
 
+
+        switch (v.getId()) {
+
+            case R.id.button1:
+
+//                Intent intent = new Intent(getApplicationContext(), menu.class);
+//                startActivity(intent);
+
+                break;
+
+            case R.id.button2:
+
+                break;
+
+            case R.id.button3:
+
+
+                break;
+
+            case R.id.button4:
+
+
+                break;
+            case R.id.button5:
+
+
+                break;
+
+            case R.id.button6:
+
+
+                break;
+
+            case R.id.button7:
+
+
+                break;
+
+            case R.id.button8:
+
+
+                break;
+
+            case R.id.button9:
+
+
+                break;
+            default:
+                break;
+
+        }
+    }
 }

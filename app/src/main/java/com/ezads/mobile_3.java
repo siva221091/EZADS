@@ -22,6 +22,6 @@ public class mobile_3 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         //you can set the title for your toolbar here for different fragments different titles
-        getActivity().setTitle("MOBILES");
+        getActivity().setTitle("Mobiles");
     }
 }
