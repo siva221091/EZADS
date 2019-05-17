@@ -48,6 +48,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         holder.textViewShortDesc.setText(product.getShortdesc());
         holder.textViewExpire.setText(product.getExpire());
         holder.textViewPercent.setText(product.getPercent());
+        holder.textViewAddress.setText(product.getAddress());
 
         holder.imageView.setImageDrawable(mCtx.getResources().getDrawable(product.getImage()));
 
@@ -62,7 +63,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
     class ProductViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textViewTitle, textViewShortDesc, textViewExpire, textViewPercent;
+        TextView textViewTitle, textViewShortDesc, textViewExpire, textViewPercent,textViewAddress;
         ImageView imageView;
 
         public ProductViewHolder(View itemView) {
@@ -72,6 +73,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             textViewShortDesc = itemView.findViewById(R.id.product_details);
             textViewExpire = itemView.findViewById(R.id.exp_times);
             textViewPercent = itemView.findViewById(R.id.offer_percent);
+            textViewAddress = itemView.findViewById(R.id.address);
             imageView = itemView.findViewById(R.id.productimg);
         }
     }

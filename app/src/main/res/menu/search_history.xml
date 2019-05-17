@@ -1,4 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:iconTint="@android:color/white"
+        app:showAsAction="always"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        android:title="Search"/>
+    <item
+        android:id="@+id/filter"
+        android:icon="@drawable/filter"
+        android:title="Filter_Sort"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/popular"
+                android:icon="@drawable/popular"
+                android:orderInCategory="100"
+                android:title="Popularity" />
+
+            <item
+                android:id="@+id/pricelh"
+                android:icon="@drawable/price"
+                android:orderInCategory="100"
+                android:title="Price Low to High" />
+
+            <item
+                android:id="@+id/pricehl"
+                android:icon="@drawable/price"
+                android:orderInCategory="100"
+                android:title="Price High to Low" />
+            <item
+                android:id="@+id/brand"
+                android:icon="@drawable/brand"
+                android:orderInCategory="100"
+                android:title="Brand" />
+
+
+            <item
+                android:id="@+id/discount"
+                android:icon="@drawable/offer"
+                android:orderInCategory="100"
+                android:title="Discount" />
+            <item
+                android:id="@+id/latest"
+                android:icon="@drawable/latest"
+                android:orderInCategory="100"
+                android:title="Latest" />
+        </menu>
+    </item>
 
 </menu>

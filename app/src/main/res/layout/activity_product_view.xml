@@ -1,9 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".product_view">
 
-</android.support.constraint.ConstraintLayout>
+<android.support.v4.widget.NestedScrollView
+    android:layout_marginTop="15dp"
+    android:scrollbars="none"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView"
+    android:background="#FCFCFC"
+    android:overScrollMode="never"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:elevation="4dp"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/productimg"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:background="@drawable/tv1"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/product_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SONY TV 43 INCH 1080 FULL SCREEN HD MODEL 456789 SMART TV"
+                    android:textColor="#0B46AD"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/circleView"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_below="@+id/product_title"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/timedate" />
+
+                <TextView
+                    android:id="@+id/exp_times"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_title"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="16dp"
+                    android:text="24 hrs"
+                    android:textSize="15sp"
+                    android:textColor="#0B46AD"
+                    />
+
+                <ImageView
+                    android:id="@+id/comment"
+                    android:layout_width="31dp"
+                    android:layout_height="37dp"
+                    android:layout_below="@+id/product_title"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_toEndOf="@+id/exp_times"
+                    android:layout_toRightOf="@+id/exp_times"
+                    android:contentDescription="AAAAAAA"
+                    android:src="@drawable/gift" />
+
+                <TextView
+                    android:id="@+id/offer_percent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_title"
+                    android:layout_marginLeft="48dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toEndOf="@+id/exp_times"
+                    android:layout_toRightOf="@+id/exp_times"
+                    android:text="45 %"
+                    android:textSize="15sp"
+                    android:textColor="#0B46AD"
+                    />
+
+                <TextView
+                    android:id="@+id/product_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/exp_times"
+                    android:layout_marginTop="24dp"
+                    android:text="Here we will show the details of this products,offer details and expire date of offers"
+                    android:textSize="18sp"
+                    android:textColor="#0B46AD"
+                    />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/product_details"
+                    android:background="@drawable/searchboxstyle"
+                    android:textSize="16sp"
+                    android:text="ADDRESS"
+                    android:textColor="#4A83F7"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/address"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/searchboxstyle"
+                    android:drawableLeft="@drawable/currency"
+
+                    android:text="24000"
+                    android:textColor="#4A83F7"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</android.support.v4.widget.NestedScrollView>

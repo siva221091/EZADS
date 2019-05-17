@@ -20,6 +20,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".search_histories"
+            android:label="@string/title_activity_search_histories"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".product_view" />
+        <activity
             android:name=".menu"
             android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme.NoActionBar" />

@@ -1,129 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#ddd"
     android:orientation="vertical">
+
     <android.support.v7.widget.CardView
         android:id="@+id/android_card_view_example"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
         app:cardCornerRadius="5dp"
-        app:cardMaxElevation="1dp"
         app:cardElevation="4dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="5dp"
+        app:cardMaxElevation="1dp"
 
         >
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#FDFCFC"
+            android:background="#fff"
             android:elevation="4dp"
-            android:padding="5dp"
-            >
-
-            <ImageView
-                android:id="@+id/productimg"
-                android:layout_width="120dp"
-                android:layout_height="160dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginRight="18dp"
-
-                 />
-
-
-            <TextView
-                android:id="@+id/product_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_toRightOf="@+id/productimg"
-                android:paddingBottom="5dp"
-                android:text=""
-                android:fontFamily="sans-serif"
-                android:background="@drawable/searchboxstyle"
-                android:textSize="20sp"
-                android:textColor="#1546AA" />
-
-            <TextView
-                android:id="@+id/product_details"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/product_title"
-                android:layout_toRightOf="@+id/productimg"
-                android:text=""
-                android:fontFamily="sans-serif"
-                android:background="@drawable/searchboxstyle"
-                android:textColor="#1546AA" />
-
-            <ImageView
-                android:id="@+id/circleView"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_below="@+id/product_details"
-                android:layout_marginTop="8dp"
-                android:layout_toRightOf="@+id/productimg"
-                android:src="@drawable/timedate" />
-
-            <TextView
-                android:id="@+id/exp_times"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/product_details"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="16dp"
-                android:layout_toRightOf="@+id/productimg"
-                android:text=""
-                android:fontFamily="sans-serif"
-                android:textColor="#CE3607"
-               android:textSize="16sp" />
-
-            <ImageView
-                android:id="@+id/comment"
-                android:layout_width="30dp"
-                android:layout_height="35dp"
-                android:layout_below="@+id/product_details"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/exp_times"
-                android:layout_toRightOf="@+id/exp_times"
-
-                android:src="@drawable/gift" />
+            android:padding="5dp">
 
             <TextView
                 android:id="@+id/offer_percent"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/product_details"
-                android:layout_marginLeft="48dp"
-                android:layout_marginTop="16dp"
-                android:layout_toEndOf="@+id/exp_times"
-                android:layout_toRightOf="@+id/exp_times"
+                android:layout_height="50dp"
+                android:layout_marginLeft="230dp"
+                android:layout_marginTop="2dp"
                 android:text=""
-                android:fontFamily="sans-serif"
-                android:textSize="16sp"
+                android:gravity="center"
                 android:textColor="#CE3607"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/comment"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@+id/offer_percent"
+                android:src="@drawable/special"
+                 />
+            <ImageView
+                android:id="@+id/productimg"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_below="@+id/comment"
+             />
+
+            <TextView
+                android:id="@+id/product_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center"
+                android:layout_below="@+id/productimg"
+                android:background="@drawable/searchboxstyle"
+                android:textSize="20sp"
+                android:textColor="#0B43B4"
                 />
 
             <TextView
-                android:id="@+id/address"
-                android:layout_width="wrap_content"
+                android:id="@+id/product_details"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/offer_percent"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="126dp"
-                android:layout_marginTop="14dp"
-                android:layout_toRightOf="@+id/productimg"
+                android:layout_below="@+id/product_title"
+                android:text=""
+                android:textSize="18sp"
                 android:background="@drawable/searchboxstyle"
+                android:textColor="#4A83F7"
+                android:gravity="center"
+                 />
+
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/product_details"
+                android:background="@drawable/searchboxstyle"
+                android:textSize="16sp"
+                android:text=""
+                android:textColor="#4A83F7"
+               android:gravity="center" />
+
+
+            <ImageView
+                android:id="@+id/circleView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/address"
+                android:src="@drawable/timedate"
+                />
+
+            <TextView
+                android:id="@+id/exp_times"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/address"
+                android:layout_toRightOf="@+id/circleView"
+                android:text=""
                 android:fontFamily="sans-serif"
-                android:text="OTHER DETAILS AND ADDRESS DETAILS"
-                android:textColor="#1546AA" />
+                android:textColor="#CE3607"
+                android:textSize="20sp"
+                android:gravity="center" />
+
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>

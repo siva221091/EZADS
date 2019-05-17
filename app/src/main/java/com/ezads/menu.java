@@ -48,6 +48,7 @@ Button button;
         setSupportActionBar(toolbar);
 
         text=(AutoCompleteTextView)findViewById(R.id.searchtext);
+        text.setFocusable(true);
         helper = new DbAdapter(this);
         String[] col = {"Name"};
         Cursor cursor = helper.getWordMatches(text.getText().toString(),col);
@@ -158,15 +159,23 @@ Button button;
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.notification) {
-            Toast toast = Toast.makeText(getApplicationContext(),
-                    "NOTHING",
-                    Toast.LENGTH_SHORT);
-            toast.show();
+            Intent intent = new Intent(getApplicationContext(), search_histories.class);
+            startActivity(intent);
+//            Toast toast = Toast.makeText(getApplicationContext(),
+//                    "NOTHING",
+//                    Toast.LENGTH_SHORT);
+//            toast.show();
 
             return true;
 
         }
-
+     if (id==R.id.filter)
+       {
+           Toast toast = Toast.makeText(getApplicationContext(),
+                   "Filter/Sort",
+                   Toast.LENGTH_SHORT);
+           toast.show();
+       }
 
         return super.onOptionsItemSelected(item);
     }
@@ -298,50 +307,138 @@ Button button;
     @Override
     public void onClick(View v) {
 
-
         switch (v.getId()) {
 
             case R.id.button1:
+                Fragment fragment = null;
+                Class fragmentClass = null;
+                fragmentClass = promotional_1.class;
+                try {
+                    fragment = (Fragment) fragmentClass.newInstance();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
-//                Intent intent = new Intent(getApplicationContext(), menu.class);
-//                startActivity(intent);
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction().replace(R.id.frame_layout, fragment).commit();
 
                 break;
 
             case R.id.button2:
+                Fragment fragment2 = null;
+                Class fragmentClass2 = null;
+                fragmentClass2 =topoffer_2.class;
+                try {
+                    fragment2 = (Fragment) fragmentClass2.newInstance();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
+                FragmentManager fragmentManager2 = getSupportFragmentManager();
+                fragmentManager2.beginTransaction().replace(R.id.frame_layout, fragment2).commit();
                 break;
 
             case R.id.button3:
 
+                Fragment fragment3 = null;
+                Class fragmentClass3 = null;
+                fragmentClass3 =mobile_3.class;
+                try {
+                    fragment3 = (Fragment) fragmentClass3.newInstance();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
+                FragmentManager fragmentManager3 = getSupportFragmentManager();
+                fragmentManager3.beginTransaction().replace(R.id.frame_layout, fragment3).commit();
                 break;
 
             case R.id.button4:
+                Fragment fragment4 = null;
+                Class fragmentClass4 = null;
+                fragmentClass4 =electronics_4.class;
+                try {
+                    fragment4 = (Fragment) fragmentClass4.newInstance();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
+                FragmentManager fragmentManager4 = getSupportFragmentManager();
+                fragmentManager4.beginTransaction().replace(R.id.frame_layout, fragment4).commit();
 
                 break;
             case R.id.button5:
+                Fragment fragment5 = null;
+                Class fragmentClass5 = null;
+                fragmentClass5 =beauty_5.class;
+                try {
+                    fragment5 = (Fragment) fragmentClass5.newInstance();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
+                FragmentManager fragmentManager5 = getSupportFragmentManager();
+                fragmentManager5.beginTransaction().replace(R.id.frame_layout, fragment5).commit();
 
                 break;
 
             case R.id.button6:
+                Fragment fragment6 = null;
+                Class fragmentClass6 = null;
+                fragmentClass6 =fashion_6.class;
+                try {
+                    fragment6 = (Fragment) fragmentClass6.newInstance();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
+                FragmentManager fragmentManager6 = getSupportFragmentManager();
+                fragmentManager6.beginTransaction().replace(R.id.frame_layout, fragment6).commit();
 
                 break;
 
             case R.id.button7:
 
+                Fragment fragment7 = null;
+                Class fragmentClass7 = null;
+                fragmentClass7 =homeappliances_7.class;
+                try {
+                    fragment7 = (Fragment) fragmentClass7.newInstance();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
+                FragmentManager fragmentManager7 = getSupportFragmentManager();
+                fragmentManager7.beginTransaction().replace(R.id.frame_layout, fragment7).commit();
                 break;
 
             case R.id.button8:
+                Fragment fragment8 = null;
+                Class fragmentClass8 = null;
+                fragmentClass8 =toysbaby_8.class;
+                try {
+                    fragment8 = (Fragment) fragmentClass8.newInstance();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
+                FragmentManager fragmentManager8 = getSupportFragmentManager();
+                fragmentManager8.beginTransaction().replace(R.id.frame_layout, fragment8).commit();
 
                 break;
 
             case R.id.button9:
+                Fragment fragment9 = null;
+                Class fragmentClass9= null;
+                fragmentClass9 =sports_9.class;
+                try {
+                    fragment9 = (Fragment) fragmentClass9.newInstance();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+                FragmentManager fragmentManager9 = getSupportFragmentManager();
+                fragmentManager9.beginTransaction().replace(R.id.frame_layout, fragment9).commit();
 
 
                 break;

@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,8 +22,11 @@ public class promotional_1 extends Fragment  {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.promotional_layout, container, false);
+
+
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
+//        recyclerView.setNestedScrollingEnabled(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         productList = new ArrayList<>();
         productList.add(
@@ -32,7 +36,8 @@ public class promotional_1 extends Fragment  {
                         "13.3 inch, Silver, 1.35 kg",
                         "24hr only",
                         "45 %",
-                        R.drawable.phone2));
+                        "SKY Walk Mall Chennai",
+                        R.drawable.tv1));
 
         productList.add(
                 new product_promo(
@@ -41,6 +46,7 @@ public class promotional_1 extends Fragment  {
                         "14 inch, Gray, 1.659 kg",
                         "1 day",
                         "50 %",
+                        "phoenix mall Chennai",
                         R.drawable.tv1));
 
         productList.add(
@@ -49,7 +55,8 @@ public class promotional_1 extends Fragment  {
                         "13.3 inch, Silver, 1.35 kg",
                         "3 days",
                         "15 %",
-                        R.drawable.biooil));
+                        "Fun Mall Chennai",
+                        R.drawable.tv1));
 
         //creating recyclerview adapter
         ProductAdapter adapter = new ProductAdapter(getActivity(), productList);
